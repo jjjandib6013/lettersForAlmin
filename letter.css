@@ -4,15 +4,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-
-} 
-
 nav {
     width: 100%;
     background-color: lightblue;
@@ -230,8 +221,5 @@ main {
     }
     .textMessage {
       font-size: 20px;
-    }
-    #typeText {
-      font-size: 16px;
     }
   }
