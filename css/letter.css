@@ -110,14 +110,14 @@ main {
     border: 3px solid black;
     border-radius: 20px;
     background-color: lightblue;
-    margin-top: 65px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .message {
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
   }
@@ -222,18 +222,18 @@ main {
 
     .border {
         width: 85%;
-        height: 315px;
+        height: 215px;
         padding-left: 10px;
         padding-right: 10px;
         text-align: center;
     }
     .description p {
       font-size: 14px;
-      padding-bottom: 50px;
+      border-bottom: 0px;
     }
     .container {
       width: 23rem;
-      height: 350px;
+      height: 250px;
     }
     .textMessage {
       font-size: 20px;
