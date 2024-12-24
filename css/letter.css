@@ -146,7 +146,7 @@ main {
     .section-a {
       width: 100%;
       height: 15rem;
-      margin-top: 60px;
+      margin-top: 0px;
     }
     .section-b {
       width: 100%;
@@ -213,11 +213,13 @@ main {
   @media (max-width: 400px) {
     
     .title p {
-      font-size: 40px;
+      font-size: 25px;
+      line-height: 30px;
     }
 
     .section-b {
       padding-top: 0px;
+      padding-bottom: 0px;
     }
 
     .border {
@@ -232,7 +234,7 @@ main {
       border-bottom: 0px;
     }
     .container {
-      width: 23rem;
+      width: 19rem;
       height: 250px;
     }
     .textMessage {
