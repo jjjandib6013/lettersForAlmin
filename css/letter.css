@@ -125,7 +125,6 @@ main {
   .section-c {
     width: 80%;
     height: 10%;
-    display: flex;
     justify-content: center;
     align-items: center;
     display: block;
@@ -219,7 +218,13 @@ main {
 
     .section-b {
       padding-top: 0px;
-      padding-bottom: 0px;
+      padding-bottom: 35px;
+      height: 40vh;
+    }
+
+    .section-c button {
+      font-size: 15px;
+      margin-left: 28px;
     }
 
     .border {
