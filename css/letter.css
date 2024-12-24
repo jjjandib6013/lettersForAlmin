@@ -66,16 +66,6 @@ main {
     padding-top: 50px;
   }
   
-  .section-c {
-    width: 50%;
-    height: 95vh;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-  }
-  
   .text-section {
     width: 80%;
     display: flex;
@@ -98,7 +88,7 @@ main {
   }
   
   .container {
-    width: 35rem;
+    width: 30rem;
     height: 400px;
     background-color: #ffbd59;
     border: 3px solid black;
@@ -120,18 +110,36 @@ main {
     border: 3px solid black;
     border-radius: 20px;
     background-color: lightblue;
-    margin-top: 100px;
+    margin-top: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .textMessage {
-    font-size: 30px;
+  .message {
+    font-size: 25px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    margin: 10px 30px;
-    text-align: center;
+  }
+
+  .section-c {
+    width: 80%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+  }
+
+  .section-c button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: #fd72aa;
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 0 10px;
   }
   
   @media (max-width: 1000px) {
@@ -208,16 +216,24 @@ main {
       font-size: 40px;
     }
 
+    .section-b {
+      padding-top: 0px;
+    }
+
     .border {
-        width: 90%;
-        height: 470px;
+        width: 85%;
+        height: 315px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
     }
     .description p {
       font-size: 14px;
+      padding-bottom: 50px;
     }
     .container {
-      width: 18rem;
-      height: 500px;
+      width: 23rem;
+      height: 350px;
     }
     .textMessage {
       font-size: 20px;
