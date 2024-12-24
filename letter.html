@@ -14,7 +14,7 @@
 </head>
 <body>
     <audio id="background-audio" class="song" loop>
-        <source src="" type="audio/mp3">
+        <source src="wishfulthinking.mp3" type="audio/mp3">
     </audio>
 
     <nav>
@@ -119,11 +119,18 @@
 
     <script>
         document.getElementById('playMusicButton').addEventListener('click', function() {
-            document.getElementById('background-audio').play();
-
             setTimeout(function() {
                 window.location.href = "heart.html";
             }, 1000);
+        });
+    </script>
+
+    <script>
+        document.getElementById('playMusicButton').addEventListener('click', function() {
+        var audio = document.getElementById('background-audio');
+        audio.play().catch(function(error) {
+            console.log("Error playing audio: " + error);
+        });
         });
     </script>
     
