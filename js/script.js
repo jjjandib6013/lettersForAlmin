@@ -95,14 +95,15 @@ var init = function () {
         time += ((Math.sin(time)) < 0 ? 9 : (n > 0.8) ? 0.2 : 1) * config.timeDelta;
         ctx.fillStyle = "rgba(0,0,0,.1)";
         ctx.fillRect(0, 0, width, height);
-
+    
+        // Draw particles
         for (let i = e.length; i--;) {
             var u = e[i];
             var q = targetPoints[u.q];
             var dx = u.trace[0].x - q[0];
             var dy = u.trace[0].y - q[1];
             var length = Math.sqrt(dx * dx + dy * dy);
-
+    
             if (10 > length) {
                 if (0.95 < rand()) u.q = ~~(rand() * heartPointsCount);
                 else {
@@ -112,29 +113,55 @@ var init = function () {
                     if (u.q < 0) u.q += heartPointsCount;
                 }
             }
-
+    
             u.vx += -dx / length * u.speed;
             u.vy += -dy / length * u.speed;
             u.trace[0].x += u.vx;
             u.trace[0].y += u.vy;
             u.vx *= u.force;
             u.vy *= u.force;
-
+    
             for (let k = 0; k < u.trace.length - 1;) {
                 var T = u.trace[k];
                 var N = u.trace[++k];
                 N.x -= config.traceK * (N.x - T.x);
                 N.y -= config.traceK * (N.y - T.y);
             }
-
+    
             ctx.fillStyle = u.f;
             for (let k = 0; k < u.trace.length; k++) {
                 ctx.fillRect(u.trace[k].x, u.trace[k].y, 1.5, 1.5); // Bigger dots for visibility
             }
         }
+    
+        function drawMultilineText(ctx, text, x, y, lineHeight, maxWidth) {
+            const lines = text.split("<br>");
+            for (let i = 0; i < lines.length; i++) {
+                ctx.fillText(lines[i], x, y + i * lineHeight, maxWidth);
+            }
+        }
+        
+        // for upper text ni
+        ctx.font = "bold 25px Arial";
+        ctx.fillStyle = "white";
+        ctx.textAlign = "center";
+        ctx.fillText("Thank you deeply and sincerely!", width / 2, height / 2 - 250);
 
+        
+        
+        // for lower text ni
+        drawMultilineText(
+            ctx,
+            "Merry Christmas<br>and a<br>Happy New Year, Almin!",
+            width / 2,
+            height / 2 + 300,
+            35, // Line height
+            width // Maximum width
+        );
+    
         window.requestAnimationFrame(loop, canvas);
     };
+    
 
     loop();
 };
